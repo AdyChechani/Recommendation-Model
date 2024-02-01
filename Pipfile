@@ -4,13 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-confluent-kafka = "*"
 pymongo = "*"
 pandas = "*"
 pipenv = "*"
-pyspark = "*"
-findspark = "*"
-matplotlib = "*"
 scikit-learn = "*"
 
 [dev-packages]
