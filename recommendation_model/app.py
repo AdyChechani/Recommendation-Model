@@ -2,7 +2,6 @@ import os
 import pandas as pd
 from pymongo import MongoClient
 import json
-import pickle
 
 import SearchSimilar
 import DescriptionModel
@@ -46,6 +45,7 @@ category_based = CategoryBased.Recommender(data)
 
 #########################
 
+# calls all the model functions and stores the list of recommended product in a dictionary that will late be added to json file
 def get_recommendations(choice):
     if choice == 'POPULAR':
         recommendations = {
@@ -123,7 +123,7 @@ def model():
         file_path = 'recommendations.json'
 
         existing_data = []
-        if os.path.exists(file_path):
+        if os.path.exists(file_path): # if the json file already exists, new recommendations will be stored in it
             with open(file_path, 'r') as json_file:
                 existing_data = json.load(json_file)
 
@@ -132,7 +132,7 @@ def model():
             with open(file_path, 'w') as json_file:
                 json.dump(existing_data, json_file, indent=2)
 
-        else:
+        else: # else create a new json file and add the recommendations there
             with open(file_path, 'w') as json_file:
                 json.dump([result], json_file, indent=2)
         

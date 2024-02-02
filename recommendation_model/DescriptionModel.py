@@ -3,6 +3,10 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 class Recommender():
+    '''
+    The description-based recommendation model suggests products with similar descriptions.
+    Provide a product description as input to get relevant recommendations
+    '''
     def __init__(self, data) -> None:
         self.data = data
     

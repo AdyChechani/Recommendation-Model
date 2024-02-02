@@ -4,6 +4,10 @@ from sklearn.neighbors import NearestNeighbors
 
 
 class Recommender():
+    '''
+    This model recommends products based on their categories. 
+    Users can input a product and receive recommendations that share similar categories.
+    '''
     def __init__(self, data) -> None:
         self.data = data
 
