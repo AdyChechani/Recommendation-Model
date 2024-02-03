@@ -1,7 +1,7 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-class Recommender():
+class Search():
     '''
     It takes product name as input, and returns product_id of top 20 similar product
 

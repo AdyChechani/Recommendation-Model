@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recommendations</title>
+    </head>
+    <body>
+        <h1>Recommendation Result</h1>
+
+        {% if user_input %}
+            {% if type == 'Recommendations' %}
+                <h3>Showing Recommendations for: {{ user_input }}</h3>
+            {% elif type == 'Search Results' %}
+                <h3>Showing Search Results for: {{ user_input }}</h3>
+            {% endif %}
+
+            <ul>
+                {% for recommendation in recommendations %}
+                    <li>{{ recommendation }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <a href="/">Home</a>
+    </body>
+</html>

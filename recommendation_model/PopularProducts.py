@@ -1,6 +1,6 @@
 import pandas as pd
 
-class Recommender():
+class PopularProducts():
     '''
     The dataset has ratings and rating_counts, but the popularity cannot be defined solely on the basis of ratings only.
     

@@ -3,7 +3,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.neighbors import NearestNeighbors
 
 
-class Recommender():
+class CategoryBasedRecommendation():
     '''
     This model recommends products based on their categories. 
     Users can input a product and receive recommendations that share similar categories.

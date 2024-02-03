@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recommendation System</title>
+    </head>
+    <body>
+        <h1>Welcome to the Recommendation System Web App!</h1>
+
+        <h2>Popular Products</h2>
+        <ul>
+            {% for product in popular_products %}
+                <li> {{ product }} </li>
+            {% endfor %}
+        </ul>
+
+        <form action="/recommend" method="post">
+            <label for="user_input">Enter Product ID:</label>
+            <input type="text" id="user_input" name="productId">
+            <button type="submit" name="action" value="recommendations">Get Recommendations</button>
+
+            <br>
+            <br>
+
+            <label for="search_input">Enter product name:</label>
+            <input type="text" id="search_input" name="search_input">
+            <button type="submit" name="action" value="search">Search</button>
+        </form>
+
+    </body>
+</html>
